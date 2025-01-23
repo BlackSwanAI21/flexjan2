@@ -1,0 +1,139 @@
+/* Base styles */
+:root {
+  color-scheme: light;
+}
+
+/* Default Theme */
+.theme-default {
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --secondary: #6366F1;
+  --background: #F9FAFB;
+  --card-bg: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border-color: #E5E7EB;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+  --secondary: #818CF8;
+  --background: #111827;
+  --card-bg: #1F2937;
+  --text-primary: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --border-color: #374151;
+}
+
+/* Ocean Theme */
+.theme-ocean {
+  --primary: #0EA5E9;
+  --primary-hover: #0284C7;
+  --secondary: #38BDF8;
+  --background: #F0F9FF;
+  --card-bg: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border-color: #E5E7EB;
+}
+
+/* Forest Theme */
+.theme-forest {
+  --primary: #059669;
+  --primary-hover: #047857;
+  --secondary: #10B981;
+  --background: #F0FDF4;
+  --card-bg: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border-color: #E5E7EB;
+}
+
+/* Custom Theme */
+.theme-custom {
+  --primary: var(--custom-primary, #4F46E5);
+  --primary-hover: var(--custom-primary-hover, #4338CA);
+  --secondary: var(--custom-secondary, #6366F1);
+  --background: var(--custom-background, #F9FAFB);
+  --card-bg: var(--custom-card-bg, #FFFFFF);
+  --text-primary: var(--custom-text-primary, #111827);
+  --text-secondary: var(--custom-text-secondary, #4B5563);
+  --border-color: var(--custom-border-color, #E5E7EB);
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background);
+}
+
+/* Text colors */
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600, .text-gray-500, .text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+
+/* Background colors */
+.bg-white, .bg-gray-50 {
+  background-color: var(--card-bg) !important;
+}
+
+.bg-indigo-600 {
+  background-color: var(--primary) !important;
+}
+
+.hover\:bg-indigo-700:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.bg-indigo-50 {
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent) !important;
+}
+
+/* Border colors */
+.border-gray-200, .border-gray-300 {
+  border-color: var(--border-color) !important;
+}
+
+.border-indigo-600 {
+  border-color: var(--primary) !important;
+}
+
+/* Text accent colors */
+.text-indigo-600 {
+  color: var(--primary) !important;
+}
+
+.text-indigo-500 {
+  color: var(--secondary) !important;
+}
+
+/* Hover states */
+.hover\:text-indigo-500:hover {
+  color: var(--secondary) !important;
+}
+
+.hover\:text-indigo-600:hover {
+  color: var(--primary) !important;
+}
+
+.hover\:bg-gray-50:hover {
+  background-color: color-mix(in srgb, var(--card-bg) 98%, var(--text-primary)) !important;
+}
+
+.hover\:border-gray-300:hover {
+  border-color: color-mix(in srgb, var(--border-color) 80%, var(--text-primary)) !important;
+}
+
+/* Focus states */
+.focus\:ring-indigo-500:focus {
+  --tw-ring-color: var(--primary) !important;
+}
+
+.focus\:border-indigo-500:focus {
+  border-color: var(--primary) !important;
+}

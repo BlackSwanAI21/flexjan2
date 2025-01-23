@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: flexaijan
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend-domain.com
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false 
